@@ -10,7 +10,7 @@ cd QWAS
 pip install --editable .
 
 ## Usage: 
-**Attention: Remember to clear the “states” folder and “weights” folder each time you switch tasks **
+**Attention: Remember to clear the “states” folder and “weights” folder each time you switch tasks.**
 1) To search for the best architecture for a specific task, run: 
 python MCTS.py –task ‘task_name’ --pretrain ‘filename’
 2) To pretrain the classifier for a specific task, run: 
