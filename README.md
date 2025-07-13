@@ -2,8 +2,11 @@
 
 ## Installation: 
 conda create -n QWAS python=3.9 
+
 conda activate QWAS 
+
 cd QWAS 
+
 pip install --editable .
 
 ## Usage: 
@@ -14,8 +17,13 @@ python MCTS.py –task ‘task_name’ --pretrain ‘filename’
 python MCTS_pretrain.py –task ‘task_name’ --output ‘filename’
 3) To reproduce the results from the paper, use the following commands:
    - MNIST/FASHION:
+      - python MCTS_pretrain.py –task MNIST/FASHION -output pre_mnist_4
+      - python MCTS.py –task MNIST/FASHION – pretrain pre_mnist_4
    - MNIST-10/FASHION-10:
+      - python MCTS_pretrain.py –task MNIST-10/FASHION-10 -output pre_mnist_10
+      - python MCTS.py –task MNIST-10/FASHION-10 –pretrain pre_mnist_10 
    - MOSI:
+      - python MCTS.py –task MOSI 
 4) The best searched architectures across the whole process are saved 
 in the file “result_XXX_fine.csv”.
 5) We have saved the initial weights of VQC as ‘init_weight_mnist’, 
